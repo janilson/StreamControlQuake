@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-style: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Roboto;
+}
+
+#template {
+
+}
+
+#header {
+    position:absolute;
+	top:0px;
+	left:0px;
+	width:1920px;
+	height:133px;
+	background-image:url('../img/bg2-croped.png');
+}
+
+#mFlag1 {
+    position:absolute;
+    top: 92px;
+	left: 563px;
+}
+
+#mFlag2 {
+    position:absolute;
+    top: 92px;
+	left: 1258px;
+}
+
+#mPlayer1 {
+    position:absolute;
+    width: 215px;
+    top: 92px;
+    left: 660px;
+    font-size: 20px;
+    text-align: right;
+    border: 1px solid red;
+}
+
+#mPlayer2 {
+    position:absolute;
+    width: 215px;
+    top: 92px;
+    left: 1043px;
+    font-size: 20px;
+    text-align: left;
+    border: 1px solid red;
+}
+
+#mMap1 {
+    position:absolute;
+    top: 10px;
+    left: 1490px;
+}
+
+#mMap2 {
+    position:absolute;
+    top: 10px;
+    left: 1610px;
+}
+
+#mMap3 {
+    position:absolute;
+    top: 10px;
+    left: 1740px;
+}
+
+#mWinner1 {
+    position:absolute;
+    top: 10px;
+    left: 1490px;
+    z-index: 10000;
+}
+
+#mWinner2 {
+    position:absolute;
+    top: 10px;
+    left: 1610px;
+    z-index: 10000;
+}
+
+#mWinner3 {
+    position:absolute;
+    top: 10px;
+    left: 1740px;
+    z-index: 10000;
+}

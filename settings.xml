@@ -1,0 +1,8 @@
+<!DOCTYPE StreamControl>
+<settings>
+ <altHotkeyHandling>0</altHotkeyHandling>
+ <format>1</format>
+ <layoutPath>browserfiles_layout_qc.xml</layoutPath>
+ <outputPath>app\</outputPath>
+ <useCDATA>0</useCDATA>
+</settings>

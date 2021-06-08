@@ -1,0 +1,381 @@
+<!DOCTYPE StreamControlLayout>
+<layout width="550" height="400" tabbed="1">
+  <tab name="Match Info">
+    <label x="10" y="5" width="150" height="16">Players</label>
+    <label x="180" y="5" width="150" height="16">Flags (AAA)</label>
+    <label x="250" y="5" width="150" height="16">Teams (AAA)</label>
+    <label x="335" y="5" width="150" height="16">Score</label>
+    <label x="400" y="5" width="150" height="16">Commands</label>
+    <label x="10" y="25" width="40" height="20">P1 Blue</label>
+    <label x="10" y="55" width="40" height="20">P2 Red</label>
+    <lineEdit id="mPlayer1" x="60" y="25" width="110" height="20" dataSet="players.csv">Player 1 / Blue</lineEdit>
+    <lineEdit id="mFlag1" x="180" y="25" width="55" height="20" dataSet="players.csv" dataField="2" master="mPlayer1">Country</lineEdit>
+    <lineEdit id="mPlayer2" x="60" y="55" width="110" height="20" dataSet="players.csv">Player 2 / Red</lineEdit>
+    <lineEdit id="mFlag2" x="180" y="55" width="55" height="20" dataSet="players.csv" dataField="2" master="mPlayer2">Country</lineEdit>
+    <lineEdit id="mTeam1" x="250" y="25" width="70" height="20" dataSet="players.csv" dataField="2" master="mPlayer2">Team</lineEdit>
+    <lineEdit id="mTeam2" x="250" y="55" width="70" height="20" dataSet="players.csv" dataField="2" master="mPlayer2">Team</lineEdit>
+    <spinBox id="mScore1" x="335" y="25" width="50" height="22" maximum="2" />
+    <spinBox id="mScore2" x="335" y="55" width="50" height="22" maximum="2" />
+    <button type="reset" x="450" y="25" width="40" height="23" tooltip="Clear Player 1 fields" id="mClear1" reset="mPlayer1,mFlag1">Clear</button>
+    <button type="reset" x="400" y="25" width="40" height="23" tooltip="Reset the Scores" id="reset" reset="mScore1,mScore2">Reset</button>
+    <button type="reset" x="450" y="55" width="40" height="23" tooltip="Clear Player 2 fields" id="mClear2" reset="mPlayer2,mFlag2">Clear</button>
+    <button type="swap" x="400" y="55" width="40" height="23" tooltip="Swap the Scores" id="mSwap" swapSet1="mPlayer1,mScore1,mFlag1" swapSet2="mPlayer2,mScore2,mFlag2">Swap</button>
+    <label x="10" y="95" width="46" height="20">Round</label>
+    <comboBox id="mRound" width="175" height="20" x="60" y="95">
+      <comboItem selected="true">Finals</comboItem>
+      <comboItem>Semi-finals</comboItem>
+      <comboItem>Quarter-finals</comboItem>
+      <comboItem>R16</comboItem>
+      <comboItem>R32</comboItem>
+      <comboItem>R64</comboItem>
+      <comboItem>R128</comboItem>
+    </comboBox>
+    <label x="265" y="95" width="46" height="20">Bracket</label>
+    <comboBox id="mBracket" width="180" height="20" x="310" y="95">
+      <comboItem selected="true">Winners</comboItem>
+      <comboItem>Losers</comboItem>
+    </comboBox>
+    <label x="10" y="140" width="150" height="16">Maps to be played</label>
+    <label x="210" y="140" width="150" height="16">Winner</label>
+    <label x="370" y="140" width="150" height="16">Match Type</label>
+    <line x="10" y="160" width="530" height="3" />
+    <label x="10" y="170" width="66" height="20">Map 1</label>
+    <comboBox id="mMap1" width="150" height="20" x="50" y="170">
+      <comboItem selected="true" value="1">Awoken</comboItem>
+      <comboItem value="2">Bloodrun</comboItem>
+      <comboItem value="3">Blood Covenant</comboItem>
+      <comboItem value="4">Corrupted Keep</comboItem>
+      <comboItem value="5">Deep Embrace</comboItem>
+      <comboItem value="6">Exile</comboItem>
+      <comboItem value="7">Molten Falls</comboItem>
+      <comboItem value="8">Ruins of Sarnath</comboItem>
+      <comboItem value="9">Vale of Pnath</comboItem>
+    </comboBox>
+    <label x="10" y="200" width="66" height="20">Map 2</label>
+    <comboBox id="mMap2" width="150" height="20" x="50" y="200">
+      <comboItem selected="true" value="1">Awoken</comboItem>
+      <comboItem value="2">Bloodrun</comboItem>
+      <comboItem value="3">Blood Covenant</comboItem>
+      <comboItem value="4">Corrupted Keep</comboItem>
+      <comboItem value="5">Deep Embrace</comboItem>
+      <comboItem value="6">Exile</comboItem>
+      <comboItem value="7">Molten Falls</comboItem>
+      <comboItem value="8">Ruins of Sarnath</comboItem>
+      <comboItem value="9">Vale of Pnath</comboItem>
+    </comboBox>
+    <label x="10" y="230" width="66" height="20">Map 3</label>
+    <comboBox id="mMap3" width="150" height="20" x="50" y="230">
+      <comboItem selected="true" value="1">Awoken</comboItem>
+      <comboItem value="2">Bloodrun</comboItem>
+      <comboItem value="3">Blood Covenant</comboItem>
+      <comboItem value="4">Corrupted Keep</comboItem>
+      <comboItem value="5">Deep Embrace</comboItem>
+      <comboItem value="6">Exile</comboItem>
+      <comboItem value="7">Molten Falls</comboItem>
+      <comboItem value="8">Ruins of Sarnath</comboItem>
+      <comboItem value="9">Vale of Pnath</comboItem>
+    </comboBox>
+    <comboBox id="mWinner1" width="150" height="20" x="210" y="170">
+      <comboItem selected="true" value="blank">Not played</comboItem>
+      <comboItem value="bluewins">Player 1 / Blue</comboItem>
+      <comboItem value="redwins">Player 2 / Red</comboItem>
+    </comboBox>
+    <comboBox id="mWinner2" width="150" height="20" x="210" y="200">
+      <comboItem selected="true" value="blank">Not played</comboItem>
+      <comboItem value="bluewins">Player 1 / Blue</comboItem>
+      <comboItem value="redwins">Player 2 / Red</comboItem>
+    </comboBox>
+    <comboBox id="mWinner3" width="150" height="20" x="210" y="230">
+      <comboItem selected="true" value="blank">Not played</comboItem>
+      <comboItem value="bluewins">Player 1 / Blue</comboItem>
+      <comboItem value="redwins">Player 2 / Red</comboItem>
+    </comboBox>
+    <comboBox id="mType" width="150" height="20" x="370" y="170">
+      <comboItem selected="true">BO3</comboItem>
+      <comboItem>BO1</comboItem>
+      <comboItem>Player 2 / Red</comboItem>
+    </comboBox>
+  </tab>
+
+  <tab name="Picks and Bans (BO3)">
+    <label x="10" y="10" width="80" height="16">1st Pick (Nick)</label>
+    <label x="90" y="10" width="80" height="16">1st Pick (Flag)</label>
+    <label x="370" y="10" width="80" height="20">2nd Pick (Nick)</label>
+    <label x="450" y="10" width="80" height="16">2nd Pick (Flag)</label>
+    <label x="60" y="80" width="80" height="16">1st Ban Champ</label>
+    <label x="140" y="80" width="80" height="16">1st Pick Champ</label>
+    <label x="225" y="80" width="80" height="16">Map</label>
+    <label x="310" y="80" width="80" height="16">2nd Pick Champ</label>
+    <label x="405" y="80" width="80" height="20">2nd Ban Champ</label>
+    <lineEdit id="pbName1" x="10" y="30" width="75" height="20" dataSet="players.csv" />
+    <lineEdit id="pbCountry1" x="90" y="30" width="75" height="20" dataSet="players.csv" />
+    <lineEdit id="pbCountry2" x="450" y="30" width="75" height="20" dataSet="players.csv" />
+    <lineEdit id="pbName2" x="370" y="30" width="75" height="20" dataSet="players.csv" />
+    <line x="10" y="100" width="530" height="3" />
+    <label x="10" y="110" width="200" height="20">1st Ban -------------------------------------------</label>
+    <comboBox id="pbBanMap1" width="75" height="20" x="225" y="110">
+      <comboItem selected="true" value="Awoken">Awoken</comboItem>
+      <comboItem>Bloodrun</comboItem>
+      <comboItem>Blood Covenant</comboItem>
+      <comboItem>Corrupted Keep</comboItem>
+      <comboItem>Deep Embrace</comboItem>
+      <comboItem>Exile</comboItem>
+      <comboItem>Molten Falls</comboItem>
+      <comboItem>Ruins of Sarnath</comboItem>
+      <comboItem>Vale of Pnath</comboItem>
+    </comboBox>
+    <label x="310" y="140" width="220" height="20"> ------------------------------------------- 2nd Ban</label>
+    <comboBox id="pbBanMap2" width="75" height="20" x="225" y="140">
+      <comboItem selected="true" value="Awoken">Awoken</comboItem>
+      <comboItem>Bloodrun</comboItem>
+      <comboItem>Blood Covenant</comboItem>
+      <comboItem>Corrupted Keep</comboItem>
+      <comboItem>Deep Embrace</comboItem>
+      <comboItem>Exile</comboItem>
+      <comboItem>Molten Falls</comboItem>
+      <comboItem>Ruins of Sarnath</comboItem>
+      <comboItem>Vale of Pnath</comboItem>
+    </comboBox>
+    <label x="10" y="170" width="200" height="20">1st Pick</label>
+    <comboBox id="pbPickMap1" width="75" height="20" x="225" y="170">
+      <comboItem selected="true" value="Awoken">Awoken</comboItem>
+      <comboItem>Bloodrun</comboItem>
+      <comboItem>Blood Covenant</comboItem>
+      <comboItem>Corrupted Keep</comboItem>
+      <comboItem>Deep Embrace</comboItem>
+      <comboItem>Exile</comboItem>
+      <comboItem>Molten Falls</comboItem>
+      <comboItem>Ruins of Sarnath</comboItem>
+      <comboItem>Vale of Pnath</comboItem>
+    </comboBox>
+    <comboBox id="pbBanChampMap1" width="75" height="20" x="55" y="170">
+      <comboItem selected="true">Anarki</comboItem>
+      <comboItem>Athena</comboItem>
+      <comboItem>BJ Blazkowicz</comboItem>
+      <comboItem>Clutch</comboItem>
+      <comboItem>Deathknight</comboItem>
+      <comboItem>Doom</comboItem>
+      <comboItem>Eisen</comboItem>
+      <comboItem>Galena</comboItem>
+      <comboItem>Keel</comboItem>
+      <comboItem>Nyx</comboItem>
+      <comboItem>Ranger</comboItem>
+      <comboItem>Scalebearer</comboItem>
+      <comboItem>Slash</comboItem>
+      <comboItem>Sorlag</comboItem>
+      <comboItem>Strogg Peeker</comboItem>
+      <comboItem>Visor</comboItem>
+    </comboBox>
+    <comboBox id="pbP1PickChampMap1" width="75" height="20" x="140" y="170">
+      <comboItem selected="true">Anarki</comboItem>
+      <comboItem>Athena</comboItem>
+      <comboItem>BJ Blazkowicz</comboItem>
+      <comboItem>Clutch</comboItem>
+      <comboItem>Deathknight</comboItem>
+      <comboItem>Doom</comboItem>
+      <comboItem>Eisen</comboItem>
+      <comboItem>Galena</comboItem>
+      <comboItem>Keel</comboItem>
+      <comboItem>Nyx</comboItem>
+      <comboItem>Ranger</comboItem>
+      <comboItem>Scalebearer</comboItem>
+      <comboItem>Slash</comboItem>
+      <comboItem>Sorlag</comboItem>
+      <comboItem>Strogg Peeker</comboItem>
+      <comboItem>Visor</comboItem>
+    </comboBox>
+    <comboBox id="pbP2PickChampMap1" width="75" height="20" x="310" y="170">
+      <comboItem selected="true">Anarki</comboItem>
+      <comboItem>Athena</comboItem>
+      <comboItem>BJ Blazkowicz</comboItem>
+      <comboItem>Clutch</comboItem>
+      <comboItem>Deathknight</comboItem>
+      <comboItem>Doom</comboItem>
+      <comboItem>Eisen</comboItem>
+      <comboItem>Galena</comboItem>
+      <comboItem>Keel</comboItem>
+      <comboItem>Nyx</comboItem>
+      <comboItem>Ranger</comboItem>
+      <comboItem>Scalebearer</comboItem>
+      <comboItem>Slash</comboItem>
+      <comboItem>Sorlag</comboItem>
+      <comboItem>Strogg Peeker</comboItem>
+      <comboItem>Visor</comboItem>
+    </comboBox>
+    <label x="485" y="200" width="220" height="20"> 2nd Pick</label>
+    <comboBox id="pbBanChampMap2" width="75" height="20" x="400" y="200">
+      <comboItem selected="true">Anarki</comboItem>
+      <comboItem>Athena</comboItem>
+      <comboItem>BJ Blazkowicz</comboItem>
+      <comboItem>Clutch</comboItem>
+      <comboItem>Deathknight</comboItem>
+      <comboItem>Doom</comboItem>
+      <comboItem>Eisen</comboItem>
+      <comboItem>Galena</comboItem>
+      <comboItem>Keel</comboItem>
+      <comboItem>Nyx</comboItem>
+      <comboItem>Ranger</comboItem>
+      <comboItem>Scalebearer</comboItem>
+      <comboItem>Slash</comboItem>
+      <comboItem>Sorlag</comboItem>
+      <comboItem>Strogg Peeker</comboItem>
+      <comboItem>Visor</comboItem>
+    </comboBox>
+    <comboBox id="pbP2PickChampMap2" width="75" height="20" x="310" y="200">
+      <comboItem selected="true">Anarki</comboItem>
+      <comboItem>Athena</comboItem>
+      <comboItem>BJ Blazkowicz</comboItem>
+      <comboItem>Clutch</comboItem>
+      <comboItem>Deathknight</comboItem>
+      <comboItem>Doom</comboItem>
+      <comboItem>Eisen</comboItem>
+      <comboItem>Galena</comboItem>
+      <comboItem>Keel</comboItem>
+      <comboItem>Nyx</comboItem>
+      <comboItem>Ranger</comboItem>
+      <comboItem>Scalebearer</comboItem>
+      <comboItem>Slash</comboItem>
+      <comboItem>Sorlag</comboItem>
+      <comboItem>Strogg Peeker</comboItem>
+      <comboItem>Visor</comboItem>
+    </comboBox>
+    <comboBox id="pbPickMap2" width="75" height="20" x="225" y="200">
+      <comboItem selected="true" value="Awoken">Awoken</comboItem>
+      <comboItem>Bloodrun</comboItem>
+      <comboItem>Blood Covenant</comboItem>
+      <comboItem>Corrupted Keep</comboItem>
+      <comboItem>Deep Embrace</comboItem>
+      <comboItem>Exile</comboItem>
+      <comboItem>Molten Falls</comboItem>
+      <comboItem>Ruins of Sarnath</comboItem>
+      <comboItem>Vale of Pnath</comboItem>
+    </comboBox>
+    <comboBox id="pbP1PickChampMap2" width="75" height="20" x="140" y="200">
+      <comboItem selected="true">Anarki</comboItem>
+      <comboItem>Athena</comboItem>
+      <comboItem>BJ Blazkowicz</comboItem>
+      <comboItem>Clutch</comboItem>
+      <comboItem>Deathknight</comboItem>
+      <comboItem>Doom</comboItem>
+      <comboItem>Eisen</comboItem>
+      <comboItem>Galena</comboItem>
+      <comboItem>Keel</comboItem>
+      <comboItem>Nyx</comboItem>
+      <comboItem>Ranger</comboItem>
+      <comboItem>Scalebearer</comboItem>
+      <comboItem>Slash</comboItem>
+      <comboItem>Sorlag</comboItem>
+      <comboItem>Strogg Peeker</comboItem>
+      <comboItem>Visor</comboItem>
+    </comboBox>
+    <label x="10" y="230" width="200" height="20">1st Ban -------------------------------------------</label>
+    <comboBox id="pbBanMap3" width="75" height="20" x="225" y="230">
+      <comboItem selected="true" value="Awoken">Awoken</comboItem>
+      <comboItem>Bloodrun</comboItem>
+      <comboItem>Blood Covenant</comboItem>
+      <comboItem>Corrupted Keep</comboItem>
+      <comboItem>Deep Embrace</comboItem>
+      <comboItem>Exile</comboItem>
+      <comboItem>Molten Falls</comboItem>
+      <comboItem>Ruins of Sarnath</comboItem>
+      <comboItem>Vale of Pnath</comboItem>
+    </comboBox>
+    <label x="310" y="260" width="220" height="20"> ------------------------------------------- 2nd Ban</label>
+    <comboBox id="pbBanMap4" width="75" height="20" x="225" y="260">
+      <comboItem selected="true" value="Awoken">Awoken</comboItem>
+      <comboItem>Bloodrun</comboItem>
+      <comboItem>Blood Covenant</comboItem>
+      <comboItem>Corrupted Keep</comboItem>
+      <comboItem>Deep Embrace</comboItem>
+      <comboItem>Exile</comboItem>
+      <comboItem>Molten Falls</comboItem>
+      <comboItem>Ruins of Sarnath</comboItem>
+      <comboItem>Vale of Pnath</comboItem>
+    </comboBox>
+    <label x="10" y="290" width="200" height="20">Decider</label>
+    <comboBox id="pbPickMap3" width="75" height="20" x="225" y="290">
+      <comboItem selected="true" value="Awoken">Awoken</comboItem>
+      <comboItem>Bloodrun</comboItem>
+      <comboItem>Blood Covenant</comboItem>
+      <comboItem>Corrupted Keep</comboItem>
+      <comboItem>Deep Embrace</comboItem>
+      <comboItem>Exile</comboItem>
+      <comboItem>Molten Falls</comboItem>
+      <comboItem>Ruins of Sarnath</comboItem>
+      <comboItem>Vale of Pnath</comboItem>
+    </comboBox>
+    <comboBox id="pbBanChampMap3" width="75" height="20" x="55" y="290">
+      <comboItem selected="true">Anarki</comboItem>
+      <comboItem>Athena</comboItem>
+      <comboItem>BJ Blazkowicz</comboItem>
+      <comboItem>Clutch</comboItem>
+      <comboItem>Deathknight</comboItem>
+      <comboItem>Doom</comboItem>
+      <comboItem>Eisen</comboItem>
+      <comboItem>Galena</comboItem>
+      <comboItem>Keel</comboItem>
+      <comboItem>Nyx</comboItem>
+      <comboItem>Ranger</comboItem>
+      <comboItem>Scalebearer</comboItem>
+      <comboItem>Slash</comboItem>
+      <comboItem>Sorlag</comboItem>
+      <comboItem>Strogg Peeker</comboItem>
+      <comboItem>Visor</comboItem>
+    </comboBox>
+    <comboBox id="pbP1PickChampMap3" width="75" height="20" x="140" y="290">
+      <comboItem selected="true">Anarki</comboItem>
+      <comboItem>Athena</comboItem>
+      <comboItem>BJ Blazkowicz</comboItem>
+      <comboItem>Clutch</comboItem>
+      <comboItem>Deathknight</comboItem>
+      <comboItem>Doom</comboItem>
+      <comboItem>Eisen</comboItem>
+      <comboItem>Galena</comboItem>
+      <comboItem>Keel</comboItem>
+      <comboItem>Nyx</comboItem>
+      <comboItem>Ranger</comboItem>
+      <comboItem>Scalebearer</comboItem>
+      <comboItem>Slash</comboItem>
+      <comboItem>Sorlag</comboItem>
+      <comboItem>Strogg Peeker</comboItem>
+      <comboItem>Visor</comboItem>
+    </comboBox>
+    <comboBox id="pbP2PickChampMap3" width="75" height="20" x="310" y="290">
+      <comboItem selected="true">Anarki</comboItem>
+      <comboItem>Athena</comboItem>
+      <comboItem>BJ Blazkowicz</comboItem>
+      <comboItem>Clutch</comboItem>
+      <comboItem>Deathknight</comboItem>
+      <comboItem>Doom</comboItem>
+      <comboItem>Eisen</comboItem>
+      <comboItem>Galena</comboItem>
+      <comboItem>Keel</comboItem>
+      <comboItem>Nyx</comboItem>
+      <comboItem>Ranger</comboItem>
+      <comboItem>Scalebearer</comboItem>
+      <comboItem>Slash</comboItem>
+      <comboItem>Sorlag</comboItem>
+      <comboItem>Strogg Peeker</comboItem>
+      <comboItem>Visor</comboItem>
+    </comboBox>
+  </tab>
+
+  <tab name="Event Info">
+    <label x="10" y="15" width="150" height="15">Event Info</label>
+    <line x="10" y="35" width="530" height="3" />
+    <label x="10" y="50" width="66" height="20">Event name</label>
+    <lineEdit id="eName" x="80" y="50" width="450" height="20" dataSet="players.csv" />
+    <label x="10" y="80" width="66" height="20">Event logo</label>
+    <lineEdit id="eLogo" x="80" y="80" width="450" height="20" dataSet="players.csv" />
+    <label x="10" y="115" width="530" height="15">Logos must have transparent background (PNG file) and dimensions XXX x XXX.</label>
+    <label x="10" y="155" width="530" height="15">Sponsors and Partners</label>
+    <line x="10" y="170" width="530" height="6" />
+    <label x="10" y="190" width="66" height="20">Sponsor 1</label>
+    <lineEdit id="eSponsor1" x="80" y="190" width="450" height="20" dataSet="players.csv" />
+    <label x="10" y="220" width="66" height="20">Sponsor 2</label>
+    <lineEdit id="eSponsor2" x="80" y="220" width="450" height="20" dataSet="players.csv" />
+    <label x="10" y="250" width="66" height="20">Sponsor 3</label>
+    <lineEdit id="eSponsor3" x="80" y="250" width="450" height="20" dataSet="players.csv" />
+    <label x="10" y="280" width="530" height="15">Sponsors logos must have transparent background (PNG file) and dimensions XXX x XXX.</label>
+  </tab>
+</layout>
