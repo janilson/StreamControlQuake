@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /** background: rgba (0,0,0,0.1);**/
+    background-color: white;
+    overflow: hidden;
+}
+
+#broadcaster {
+    background-image: URL("assets/img/Kirk-logo.png");
+}
+
+#maps {
+    height: 200px;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    animation-name: center-maps;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#eLogo {
+    width: 390px;
+    height: 390px;
+    background-color: gray;
+    position: absolute;
+    top: 35%;
+    /**-webkit-transform: translateZ(-50%);
+    transform: translateZ(-50%);**/
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    animation-name: center-logo;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    padding: 0px;
+    margin: 0px;
+    /** z-index: 1000; **/
+    background: url("assets/img/qwc.png") repeat 0;
+}
+
+#mRound {
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    bottom: -110%;
+    left: 15%;
+    font-family: "Aldo the Apache";
+    font-size: 40px;
+    color: rgba(186, 54, 20);
+}
+
+#mBracket {
+    width: fit-content;
+    padding: 0 10px;
+    height: 50px;
+    position: absolute;
+    bottom: -120%;
+    left: 5%;
+    font-family: "Aldo the Apache";
+    font-size: 40px;
+    border: 5px solid rgba(186, 54, 20);
+    color: rgba(186, 54, 20);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#broadcaster {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 2%;
+    /**-webkit-transform: translateZ(-50%);
+    transform: translateZ(-50%);**/
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#presents {
+    font-family: "Aldo the Apache";
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+#mChamp1 {}
+
+#mScore1 {
+    position: absolute;
+    top: -125%;
+    right: 0;
+    background-image: url("../img/hud-score.png");
+    font-family: "Aldo the Apache";
+    width: 158px;
+    height: 103px;
+    color: white;
+    font-size: 80px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#mFlag1 {
+    position: absolute;
+    left: -25%;
+    top: -70%;
+}
+
+#mPlayer1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 23%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-family: "Aldo the Apache";
+    color: white;
+    font-size: 36px;
+    opacity: 1;
+}
+
+#mChamp2 {}
+
+#mScore2 {
+    position: absolute;
+    top: -125%;
+    left: 0;
+    background-image: url("../img/hud-score.png");
+    font-family: "Aldo the Apache";
+    width: 158px;
+    height: 103px;
+    color: white;
+    font-size: 80px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#mFlag2 {
+    position: absolute;
+    right: -25%;
+    top: -70%;
+}
+
+#mPlayer2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 23%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-family: "Aldo the Apache";
+    color: white;
+    font-size: 36px;
+    opacity: 1 !important;
+}
+
+#box-score {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#bot-score-left {
+    width: 398px;
+    height: 83px;
+    background-image: url("../img/hud-left-player.png");
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+}
+
+#bot-score-right {
+    width: 398px;
+    height: 83px;
+    background-image: url("../img/hud-left-player.png");
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+}

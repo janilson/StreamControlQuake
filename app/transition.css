@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+    overflow: hidden;
+}
+
+#broadcaster {
+    background-image: URL("assets/img/Kirk-logo.png");
+}
+
+#left {
+    width: 43vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: leftwing;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(35, 35, 35, 0.4)
+    /**
+    background-image: linear-gradient(to left,rgba(168,23,41,0.6), rgba(186,54,20,0.6));
+**/
+}
+
+#right {
+    width: 43vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation-name: rightwing;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(35, 35, 35, 0.4)
+    /**
+    background-image: linear-gradient(to right, rgba(168,23,41,0.6), rgba(186,54,20,0.6)); 
+    **/
+}
+
+#maps {
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    animation-name: center-maps;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#eLogo {
+    width: 390px;
+    height: 390px;
+    background-color: gray;
+    position: absolute;
+    top: 35%;
+    /**-webkit-transform: translateZ(-50%);
+    transform: translateZ(-50%);**/
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    animation-name: center-logo;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    padding: 0px;
+    margin: 0px;
+    /** z-index: 1000; **/
+    opacity: 0;
+    background: url("../img/qwc.png") repeat 0;
+}
+
+#mRound {
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    top: -55px;
+    left: 5%;
+    text-align: center;
+    font-family: "Aldo the Apache";
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgba(186, 54, 20);
+    color: rgba(186, 54, 20);
+    border-radius: 10px;
+}
+
+#mBracket {
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    top: -55px;
+    ;
+    right: 5%;
+    font-family: "Aldo the Apache";
+    text-align: center;
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgba(186, 54, 20);
+    color: rgba(186, 54, 20);
+    border-radius: 10px;
+}
+
+#broadcaster {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 2%;
+    /**-webkit-transform: translateZ(-50%);
+    transform: translateZ(-50%);**/
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#presents {
+    font-family: "Aldo the Apache";
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+@keyframes rightwing {
+    0% {
+        right: -1000px;
+        top: 0;
+    }
+    100% {
+        right: 0;
+        top: 0;
+    }
+}
+
+@keyframes leftwing {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes center-logo {
+    0% {
+        opacity: 0;
+        top: -200px;
+    }
+    20% {}
+    50% {
+        opacity: 1;
+        top: 32%;
+    }
+    70% {
+        opacity: 1;
+        top: 29%;
+    }
+    90% {
+        opacity: 1;
+        top: 31%;
+    }
+    100% {
+        opacity: 1;
+        top: 30%;
+    }
+}
+
+@keyframes center-maps {
+    0% {
+        opacity: 0;
+        bottom: -200px;
+    }
+    20% {}
+    50% {
+        opacity: 1;
+        bottom: 5%;
+    }
+    70% {
+        opacity: 1;
+        bottom: 10%;
+    }
+    90% {
+        opacity: 1;
+        bottom: 4%;
+    }
+    100% {
+        opacity: 1;
+        bottom: 6%;
+    }
+}
+
+@keyframes score-itens {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#mChamp1 {
+    width: 300px;
+    height: 350px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 3%;
+    opacity: 0;
+    animation-name: score-itens;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    color: white;
+    background: url("assets/img/champ_test.png");
+}
+
+#mScore1 {
+    width: 120px;
+    height: 240px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 72%;
+    opacity: 0;
+    animation-name: score-itens;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    color: white;
+    font-family: "Aldo the Apache";
+    font-size: 160px;
+    font-weight: 700;
+    text-shadow: 6px 6px black;
+    text-align: center;
+}
+
+#mFlag1 {
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 58%;
+    opacity: 0;
+    animation-name: score-itens;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mPlayer1 {
+    width: 340px;
+    height: 80px;
+    /**background-color: white;**/
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 43%;
+    opacity: 0;
+    animation-name: score-itens;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    font-size: 80px;
+    font-family: "Aldo the Apache";
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    text-shadow: 6px 6px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mChamp2 {
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 3%;
+    opacity: 0;
+    animation-name: score-itens;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    color: white;
+}
+
+#mScore2 {
+    width: 120px;
+    height: 240px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 72%;
+    opacity: 0;
+    animation-name: score-itens;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    color: white;
+    font-family: "Aldo the Apache";
+    font-size: 160px;
+    font-weight: 700;
+    text-shadow: 6px 6px black;
+    text-align: center;
+}
+
+#mFlag2 {
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 58%;
+    opacity: 0;
+    animation-name: score-itens;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mPlayer2 {
+    width: 340px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 43%;
+    opacity: 0;
+    animation-name: score-itens;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    font-size: 80px;
+    font-family: "Aldo the Apache";
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    text-shadow: 6px 6px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-effect {
+    position: absolute;
+    width: 120px;
+    height: 1080px;
+    left: 0;
+    top: 0;
+    background-image: url("assets/img/left-effect.png");
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+/**
+.left-effect-right {
+    position: absolute;
+    width: 100px;
+    height: 1080px;
+    right: 0;
+    top: 0;
+    background-image: url("assets/img/left-effect-2.png");
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+**/
+
+.right-effect {
+    position: absolute;
+    width: 100px;
+    height: 1080px;
+    right: 0;
+    top: 0;
+    background-image: url("assets/img/right-effect.png");
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+/**
+.right-effect-left {
+    position: absolute;
+    width: 100px;
+    height: 1080px;
+    left: 0;
+    bottom: 0;
+    background-image: url("assets/img/right-effect-2.png");
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+**/

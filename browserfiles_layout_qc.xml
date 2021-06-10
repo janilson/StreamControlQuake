@@ -3,7 +3,7 @@
   <tab name="Match Info">
     <label x="10" y="5" width="150" height="16">Players</label>
     <label x="180" y="5" width="150" height="16">Flags (AAA)</label>
-    <label x="250" y="5" width="150" height="16">Teams (AAA)</label>
+    <label x="250" y="5" width="150" height="16">Champions</label>
     <label x="335" y="5" width="150" height="16">Score</label>
     <label x="400" y="5" width="150" height="16">Commands</label>
     <label x="10" y="25" width="40" height="20">P1 Blue</label>
@@ -12,8 +12,42 @@
     <lineEdit id="mFlag1" x="180" y="25" width="55" height="20" dataSet="players.csv" dataField="2" master="mPlayer1">Country</lineEdit>
     <lineEdit id="mPlayer2" x="60" y="55" width="110" height="20" dataSet="players.csv">Player 2 / Red</lineEdit>
     <lineEdit id="mFlag2" x="180" y="55" width="55" height="20" dataSet="players.csv" dataField="2" master="mPlayer2">Country</lineEdit>
-    <lineEdit id="mTeam1" x="250" y="25" width="70" height="20" dataSet="players.csv" dataField="2" master="mPlayer2">Team</lineEdit>
-    <lineEdit id="mTeam2" x="250" y="55" width="70" height="20" dataSet="players.csv" dataField="2" master="mPlayer2">Team</lineEdit>
+    <comboBox id="mChamp1" width="75" height="20" x="250" y="25">
+      <comboItem value="anarki" selected="true">Anarki</comboItem>
+      <comboItem value="athena">Athena</comboItem>
+      <comboItem value="bj">BJ Blazkowicz</comboItem>
+      <comboItem value="clutch">Clutch</comboItem>
+      <comboItem value="dk">Deathknight</comboItem>
+      <comboItem value="doom">Doomslayer</comboItem>
+      <comboItem value="eisen">Eisen</comboItem>
+      <comboItem value="galena">Galena</comboItem>
+      <comboItem value="keel">Keel</comboItem>
+      <comboItem value="nyx">nyx</comboItem>
+      <comboItem value="ranger">Ranger</comboItem>
+      <comboItem value="scale">Scalebearer</comboItem>
+      <comboItem value="slash">Slash</comboItem>
+       <comboItem value="sorlag">Sorlag</comboItem>
+      <comboItem value="strogg">Strogg and Peeker</comboItem>
+      <comboItem value="visor">visor</comboItem>
+    </comboBox>
+    <comboBox id="mChamp2" width="75" height="20" x="250" y="55">
+      <comboItem value="anarki" selected="true">Anarki</comboItem>
+      <comboItem value="athena">Athena</comboItem>
+      <comboItem value="bj">BJ Blazkowicz</comboItem>
+      <comboItem value="clutch">Clutch</comboItem>
+      <comboItem value="dk">Deathknight</comboItem>
+      <comboItem value="doom">Doomslayer</comboItem>
+      <comboItem value="eisen">Eisen</comboItem>
+      <comboItem value="galena">Galena</comboItem>
+      <comboItem value="keel">Keel</comboItem>
+      <comboItem value="nyx">nyx</comboItem>
+      <comboItem value="ranger">Ranger</comboItem>
+      <comboItem value="scale">Scalebearer</comboItem>
+      <comboItem value="slash">Slash</comboItem>
+       <comboItem value="sorlag">Sorlag</comboItem>
+      <comboItem value="strogg">Strogg and Peeker</comboItem>
+      <comboItem value="visor">visor</comboItem>
+    </comboBox>
     <spinBox id="mScore1" x="335" y="25" width="50" height="22" maximum="2" />
     <spinBox id="mScore2" x="335" y="55" width="50" height="22" maximum="2" />
     <button type="reset" x="450" y="25" width="40" height="23" tooltip="Clear Player 1 fields" id="mClear1" reset="mPlayer1,mFlag1">Clear</button>
@@ -22,18 +56,18 @@
     <button type="swap" x="400" y="55" width="40" height="23" tooltip="Swap the Scores" id="mSwap" swapSet1="mPlayer1,mScore1,mFlag1" swapSet2="mPlayer2,mScore2,mFlag2">Swap</button>
     <label x="10" y="95" width="46" height="20">Round</label>
     <comboBox id="mRound" width="175" height="20" x="60" y="95">
-      <comboItem selected="true">Finals</comboItem>
-      <comboItem>Semi-finals</comboItem>
-      <comboItem>Quarter-finals</comboItem>
-      <comboItem>R16</comboItem>
-      <comboItem>R32</comboItem>
-      <comboItem>R64</comboItem>
-      <comboItem>R128</comboItem>
+      <comboItem value="Finals" selected="true">Finals</comboItem>
+      <comboItem value="2">Semi-finals</comboItem>
+      <comboItem value="Quarter-finals">Quarter-finals</comboItem>
+      <comboItem value="R16">R16</comboItem>
+      <comboItem value="R32">R32</comboItem>
+      <comboItem value="R64">R64</comboItem>
+      <comboItem value="R128">R128</comboItem>
     </comboBox>
     <label x="265" y="95" width="46" height="20">Bracket</label>
     <comboBox id="mBracket" width="180" height="20" x="310" y="95">
-      <comboItem selected="true">Winners</comboItem>
-      <comboItem>Losers</comboItem>
+      <comboItem value="Winners" selected="true">Winners</comboItem>
+      <comboItem value="Losers">Losers</comboItem>
     </comboBox>
     <label x="10" y="140" width="150" height="16">Maps to be played</label>
     <label x="210" y="140" width="150" height="16">Winner</label>

@@ -1,27 +1,27 @@
 <!DOCTYPE StreamControl>
 <items>
- <timestamp>1623028735</timestamp>
- <eLogo></eLogo>
- <eName></eName>
- <eSponsor1></eSponsor1>
- <eSponsor2></eSponsor2>
- <eSponsor3></eSponsor3>
+ <timestamp>1623294333</timestamp>
+ <eLogo>asd</eLogo>
+ <eName>asd</eName>
+ <eSponsor1>asd</eSponsor1>
+ <eSponsor2>asd</eSponsor2>
+ <eSponsor3>ad</eSponsor3>
  <mBracket>Winners</mBracket>
- <mFlag1>CAN</mFlag1>
- <mFlag2>CHI</mFlag2>
- <mMap1>2</mMap1>
- <mMap2>5</mMap2>
- <mMap3>7</mMap3>
- <mPlayer1>Reload</mPlayer1>
- <mPlayer2>Hungry</mPlayer2>
+ <mChamp1>anarki</mChamp1>
+ <mChamp2>anarki</mChamp2>
+ <mFlag1>BRA</mFlag1>
+ <mFlag2>SPA</mFlag2>
+ <mMap1>1</mMap1>
+ <mMap2>1</mMap2>
+ <mMap3>1</mMap3>
+ <mPlayer1>M0n0cr0m4t1c0</mPlayer1>
+ <mPlayer2>enemy killer</mPlayer2>
  <mRound>Finals</mRound>
  <mScore1>0</mScore1>
  <mScore2>0</mScore2>
- <mTeam1>DEF</mTeam1>
- <mTeam2>DEF</mTeam2>
  <mType>BO3</mType>
- <mWinner1>bluewins</mWinner1>
- <mWinner2>redwins</mWinner2>
+ <mWinner1>blank</mWinner1>
+ <mWinner2>blank</mWinner2>
  <mWinner3>blank</mWinner3>
  <pbBanChampMap1>Anarki</pbBanChampMap1>
  <pbBanChampMap2>Anarki</pbBanChampMap2>
@@ -30,10 +30,10 @@
  <pbBanMap2>Awoken</pbBanMap2>
  <pbBanMap3>Awoken</pbBanMap3>
  <pbBanMap4>Awoken</pbBanMap4>
- <pbCountry1></pbCountry1>
- <pbCountry2></pbCountry2>
- <pbName1></pbName1>
- <pbName2></pbName2>
+ <pbCountry1>BRA</pbCountry1>
+ <pbCountry2>asd</pbCountry2>
+ <pbName1>asd</pbName1>
+ <pbName2>BRA</pbName2>
  <pbP1PickChampMap1>Anarki</pbP1PickChampMap1>
  <pbP1PickChampMap2>Anarki</pbP1PickChampMap2>
  <pbP1PickChampMap3>Anarki</pbP1PickChampMap3>

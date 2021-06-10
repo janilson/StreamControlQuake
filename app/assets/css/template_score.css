@@ -19,85 +19,88 @@ body {
     font-family: Roboto;
 }
 
-#template {
-
-}
+#template {}
 
 #header {
-    position:absolute;
-	top:0px;
-	left:0px;
-	width:1920px;
-	height:133px;
-	background-image:url('../img/bg2-croped.png');
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 183px;
+    background-image: url('../img/bg2-croped.png');
 }
 
 #mFlag1 {
-    position:absolute;
+    position: absolute;
     top: 92px;
-	left: 563px;
+    left: 563px;
 }
 
 #mFlag2 {
-    position:absolute;
+    position: absolute;
     top: 92px;
-	left: 1258px;
+    left: 1258px;
 }
 
 #mPlayer1 {
-    position:absolute;
+    position: absolute;
     width: 215px;
     top: 92px;
     left: 660px;
     font-size: 20px;
     text-align: right;
     border: 1px solid red;
+    display: none;
 }
 
 #mPlayer2 {
-    position:absolute;
+    position: absolute;
     width: 215px;
     top: 92px;
     left: 1043px;
     font-size: 20px;
     text-align: left;
     border: 1px solid red;
+    display: none;
 }
 
 #mMap1 {
-    position:absolute;
-    top: 10px;
+    position: absolute;
+    top: 0;
     left: 1490px;
+    display: none;
 }
 
 #mMap2 {
-    position:absolute;
-    top: 10px;
+    position: absolute;
+    top: 0;
     left: 1610px;
+    display: none;
 }
 
 #mMap3 {
-    position:absolute;
-    top: 10px;
-    left: 1740px;
+    position: absolute;
+    top: 0;
+    left: 1730px;
+    display: none;
 }
 
 #mWinner1 {
-    position:absolute;
+    position: absolute;
     top: 10px;
     left: 1490px;
     z-index: 10000;
 }
 
 #mWinner2 {
-    position:absolute;
+    position: absolute;
     top: 10px;
     left: 1610px;
     z-index: 10000;
 }
 
 #mWinner3 {
-    position:absolute;
+    position: absolute;
     top: 10px;
     left: 1740px;
     z-index: 10000;
